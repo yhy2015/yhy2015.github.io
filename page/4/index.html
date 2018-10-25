@@ -291,127 +291,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/获得一个类的所有变量和方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="y2015">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/black.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="y2015'blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/07/iOS/获得一个类的所有变量和方法/" itemprop="url">获取一个类的所有变量和方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-07T10:26:26+08:00">
-                2017-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>获取一个类的所有方法<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> methodCount;</span><br><span class="line">Method *methodList = class_copyMethodList(currentClass, &amp;methodCount);</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">NSInteger</span> i = <span class="number">0</span>; i &lt; methodCount; i++) &#123;</span><br><span class="line">        Method method = methodList[i];</span><br><span class="line">        <span class="built_in">NSString</span> *methodName = [<span class="built_in">NSString</span> stringWithCString:sel_getName(method_getName(method))</span><br><span class="line">                                                         encoding:<span class="built_in">NSUTF8StringEncoding</span>]</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,methodName);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
-<p>获取一个类的所有变量<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">Ivar *ivars = class_copyIvarList([currentClass <span class="keyword">class</span>], &amp;count);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">        Ivar ivar = ivars[i];</span><br><span class="line">        <span class="keyword">const</span> <span class="keyword">char</span> *name = ivar_getName(ivar);</span><br><span class="line">        <span class="built_in">NSString</span> *objcName = [<span class="built_in">NSString</span> stringWithUTF8String:name];</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%d : %@"</span>,i,objcName);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/接触到的新框架/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -532,7 +411,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/编码/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/autoreleasepool/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="y2015">
@@ -551,7 +430,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/07/iOS/编码/" itemprop="url">编码</a></h1>
+                <a class="post-title-link" href="/2017/09/07/iOS/autoreleasepool/" itemprop="url">autoreleasepool</a></h1>
         
 
         <div class="post-meta">
@@ -603,9 +482,371 @@
       
         
           
-            <p><a href="https://github.com/kelp404/CocoaSecurity" target="_blank" rel="noopener">CocoaSecurity</a>常用框架<br><a href="http://www.cnblogs.com/mddblog/p/5512708.html" target="_blank" rel="noopener">base64</a>：<br>Base64编码要求把3个8位字节（3<em>8=24）转化为4个6位的字节（4</em>6=24），之后在6位的前面补两个0，形成8位一个字节的形式，这样每一个字节的有效位为6位，则取值范围0~630 ~ (2^6 - 1)。如果最后剩下的字符不到3个字节，则用0填充，输出字符使用’=’，因此我们看到Base64末尾会有1到2个’=’。另外标准还要求每76个字符要插入换行(不过，这个视具体情况定)。</p>
-<pre><code>[[NSData alloc] initWithBase64EncodedData:data options:0];
-</code></pre><p>外对于参数NSDataBase64EncodingOptions选项，有多种取值<br>NSDataBase64Encoding64CharacterLineLength：每64个字符插入\r或\n<br>NSDataBase64Encoding76CharacterLineLength：每76个字符插入\r或\n，标准中有要求是76个字符要换行，不过具体还是自己定<br>NSDataBase64EncodingEndLineWithCarriageReturn：插入字符为\r<br>NSDataBase64EncodingEndLineWithLineFeed：插入字符为\n<br>前两个选项为是否允许插入字符，以及多少个字符长度插入，两个可以选其一或者都不选。后两个选项代表要插入的具体字符。比如我们想76个字符后插入一个\r则可以NSDataBase64Encoding76CharacterLineLength | NSDataBase64EncodingEndLineWithCarriageReturn。而在上面举的例子中选项为0，则代表不插入字符。</p>
+            <p><a href="http://www.jianshu.com/p/32265cbb2a26" target="_blank" rel="noopener">http://www.jianshu.com/p/32265cbb2a26</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/野指针-僵尸对象/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y2015">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/black.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="y2015'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/07/iOS/野指针-僵尸对象/" itemprop="url">野指针-僵尸对象</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-07T10:26:26+08:00">
+                2017-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>内存回收的本质.<br>1、申请1块空间,实际上是向系统申请1块别人不再使用的空间.<br>2、释放1块空间,指的是占用的空间不再使用,这个时候系统可以分配给别人去使用.<br>3、在这个内存空间分配给别人之前，数据还是存在的.</p>
+</blockquote>
+<p>野指针 –  指指向垃圾内存的指针。指针指向的对象引用计数为0，已被标记为可回收资源<br>僵尸指针：野指针的一种，即该指针指向的对象已经被释放，但是却没有对当前指针赋值为nil。<br>僵尸对象 – 引用计数为0，做占用内存空间可被分配的对象（已经被释放的对象）</p>
+<p>如何避免僵尸对象报错.<br>当1个指针变为野指针以后. 就把这个指针的值设置为nil</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/离屏渲染（Offscreen-Rendering）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y2015">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/black.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="y2015'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/07/iOS/离屏渲染（Offscreen-Rendering）/" itemprop="url">离屏渲染</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-07T10:26:26+08:00">
+                2017-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>直接将图层合成到帧的缓冲区中<br>离屏渲染<br>离屏渲染可以被 Core Animation 自动触发，或者被应用程序强制触发。<br>屏幕外的渲染会合并/渲染图层树的一部分到一个新的缓冲区，然后该缓冲区被渲染到屏幕上。<br>离屏渲染合成计算是非常昂贵的, 但有时你也许希望强制这种操作。一种好的方法就是缓存合成的纹理/图层。<br>GPU 第一次会混合所有图层到一个基于新的纹理的位图缓存上，然后使用这个纹理来绘制到屏幕上。<br>现在，当这些图层一起移动的时候，GPU 便可以复用这个位图缓存，并且只需要做很少的工作。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/线程占用内存/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y2015">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/black.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="y2015'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/07/iOS/线程占用内存/" itemprop="url">线程占用内存</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-07T10:26:26+08:00">
+                2017-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="http://upload-images.jianshu.io/upload_images/1391187-f4d56c5870c6dd34.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 
           
         
@@ -776,7 +1017,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/离屏渲染（Offscreen-Rendering）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/获得一个类的所有变量和方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="y2015">
@@ -795,7 +1036,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/07/iOS/离屏渲染（Offscreen-Rendering）/" itemprop="url">离屏渲染</a></h1>
+                <a class="post-title-link" href="/2017/09/07/iOS/获得一个类的所有变量和方法/" itemprop="url">获取一个类的所有变量和方法</a></h1>
         
 
         <div class="post-meta">
@@ -847,7 +1088,8 @@
       
         
           
-            <p>直接将图层合成到帧的缓冲区中<br>离屏渲染<br>离屏渲染可以被 Core Animation 自动触发，或者被应用程序强制触发。<br>屏幕外的渲染会合并/渲染图层树的一部分到一个新的缓冲区，然后该缓冲区被渲染到屏幕上。<br>离屏渲染合成计算是非常昂贵的, 但有时你也许希望强制这种操作。一种好的方法就是缓存合成的纹理/图层。<br>GPU 第一次会混合所有图层到一个基于新的纹理的位图缓存上，然后使用这个纹理来绘制到屏幕上。<br>现在，当这些图层一起移动的时候，GPU 便可以复用这个位图缓存，并且只需要做很少的工作。</p>
+            <p>获取一个类的所有方法<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> methodCount;</span><br><span class="line">Method *methodList = class_copyMethodList(currentClass, &amp;methodCount);</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">NSInteger</span> i = <span class="number">0</span>; i &lt; methodCount; i++) &#123;</span><br><span class="line">        Method method = methodList[i];</span><br><span class="line">        <span class="built_in">NSString</span> *methodName = [<span class="built_in">NSString</span> stringWithCString:sel_getName(method_getName(method))</span><br><span class="line">                                                         encoding:<span class="built_in">NSUTF8StringEncoding</span>]</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,methodName);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>获取一个类的所有变量<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">Ivar *ivars = class_copyIvarList([currentClass <span class="keyword">class</span>], &amp;count);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">        Ivar ivar = ivars[i];</span><br><span class="line">        <span class="keyword">const</span> <span class="keyword">char</span> *name = ivar_getName(ivar);</span><br><span class="line">        <span class="built_in">NSString</span> *objcName = [<span class="built_in">NSString</span> stringWithUTF8String:name];</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%d : %@"</span>,i,objcName);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -896,7 +1138,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/像素对齐/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/加密/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="y2015">
@@ -915,7 +1157,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/07/iOS/像素对齐/" itemprop="url">像素对齐</a></h1>
+                <a class="post-title-link" href="/2017/09/07/iOS/加密/" itemprop="url">加密</a></h1>
         
 
         <div class="post-meta">
@@ -967,252 +1209,8 @@
       
         
           
-            <p>图片在缩放和像素不对齐<br>这两种情况下，GPU 需要再做额外的计算。它需要将源纹理上多个像素混合起来，生成一个用来合成的值。<br>当所有的像素都是对齐的时候，GPU 只剩下很少的工作要做。</p>
-<p>ios内存中一个像素占用4字节空间。比如一个1000 <em> 1000像素的图片解压后在内存中占用1000 </em> 1000 <em> 4 / (1024 </em> 1024) = 4Mb<br>1像素占用4字节（1个像素用argb来表示，rgb都有256种形式，argb每一种都用一个字节表示，故需要四字节）</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/线程占用内存/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="y2015">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/black.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="y2015'blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/07/iOS/线程占用内存/" itemprop="url">线程占用内存</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-07T10:26:26+08:00">
-                2017-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="http://upload-images.jianshu.io/upload_images/1391187-f4d56c5870c6dd34.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/野指针-僵尸对象/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="y2015">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/black.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="y2015'blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/07/iOS/野指针-僵尸对象/" itemprop="url">野指针-僵尸对象</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-07T10:26:26+08:00">
-                2017-09-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>内存回收的本质.<br>1、申请1块空间,实际上是向系统申请1块别人不再使用的空间.<br>2、释放1块空间,指的是占用的空间不再使用,这个时候系统可以分配给别人去使用.<br>3、在这个内存空间分配给别人之前，数据还是存在的.</p>
-</blockquote>
-<p>野指针 –  指指向垃圾内存的指针。指针指向的对象引用计数为0，已被标记为可回收资源<br>僵尸指针：野指针的一种，即该指针指向的对象已经被释放，但是却没有对当前指针赋值为nil。<br>僵尸对象 – 引用计数为0，做占用内存空间可被分配的对象（已经被释放的对象）</p>
-<p>如何避免僵尸对象报错.<br>当1个指针变为野指针以后. 就把这个指针的值设置为nil</p>
+            <p>DES AES RSA</p>
+<p>DES，AES有两种模式，ECB（Electronic Code Book，电子密码本）模式和CBC（Cipher Block Chaining，加密块链）模式</p>
 
           
         
