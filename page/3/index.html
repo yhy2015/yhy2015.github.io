@@ -1196,7 +1196,7 @@ p1.name = mStr;
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/离屏渲染（Offscreen-Rendering）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/内存分布/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="y2015">
@@ -1215,7 +1215,7 @@ p1.name = mStr;
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/07/iOS/离屏渲染（Offscreen-Rendering）/" itemprop="url">离屏渲染</a></h1>
+                <a class="post-title-link" href="/2017/09/07/iOS/内存分布/" itemprop="url">内存分布</a></h1>
         
 
         <div class="post-meta">
@@ -1267,7 +1267,7 @@ p1.name = mStr;
       
         
           
-            <p>直接将图层合成到帧的缓冲区中<br>离屏渲染<br>离屏渲染可以被 Core Animation 自动触发，或者被应用程序强制触发。<br>屏幕外的渲染会合并/渲染图层树的一部分到一个新的缓冲区，然后该缓冲区被渲染到屏幕上。<br>离屏渲染合成计算是非常昂贵的, 但有时你也许希望强制这种操作。一种好的方法就是缓存合成的纹理/图层。<br>GPU 第一次会混合所有图层到一个基于新的纹理的位图缓存上，然后使用这个纹理来绘制到屏幕上。<br>现在，当这些图层一起移动的时候，GPU 便可以复用这个位图缓存，并且只需要做很少的工作。</p>
+            <p><a href="http://www.cnblogs.com/mddblog/p/4405165.html" target="_blank" rel="noopener">http://www.cnblogs.com/mddblog/p/4405165.html</a><br>战队全长待</p>
 
           
         
@@ -1316,7 +1316,7 @@ p1.name = mStr;
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/野指针-僵尸对象/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/加密/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="y2015">
@@ -1335,7 +1335,7 @@ p1.name = mStr;
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/07/iOS/野指针-僵尸对象/" itemprop="url">野指针-僵尸对象</a></h1>
+                <a class="post-title-link" href="/2017/09/07/iOS/加密/" itemprop="url">加密</a></h1>
         
 
         <div class="post-meta">
@@ -1387,11 +1387,8 @@ p1.name = mStr;
       
         
           
-            <blockquote>
-<p>内存回收的本质.<br>1、申请1块空间,实际上是向系统申请1块别人不再使用的空间.<br>2、释放1块空间,指的是占用的空间不再使用,这个时候系统可以分配给别人去使用.<br>3、在这个内存空间分配给别人之前，数据还是存在的.</p>
-</blockquote>
-<p>野指针 –  指指向垃圾内存的指针。指针指向的对象引用计数为0，已被标记为可回收资源<br>僵尸指针：野指针的一种，即该指针指向的对象已经被释放，但是却没有对当前指针赋值为nil。<br>僵尸对象 – 引用计数为0，做占用内存空间可被分配的对象（已经被释放的对象）</p>
-<p>如何避免僵尸对象报错.<br>当1个指针变为野指针以后. 就把这个指针的值设置为nil</p>
+            <p>DES AES RSA</p>
+<p>DES，AES有两种模式，ECB（Electronic Code Book，电子密码本）模式和CBC（Cipher Block Chaining，加密块链）模式</p>
 
           
         
@@ -1440,7 +1437,7 @@ p1.name = mStr;
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/接触到的新框架/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/iOS/autoreleasepool/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="y2015">
@@ -1459,7 +1456,7 @@ p1.name = mStr;
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/07/iOS/接触到的新框架/" itemprop="url">接触到的新框架</a></h1>
+                <a class="post-title-link" href="/2017/09/07/iOS/autoreleasepool/" itemprop="url">autoreleasepool</a></h1>
         
 
         <div class="post-meta">
@@ -1511,7 +1508,7 @@ p1.name = mStr;
       
         
           
-            <p>1、Firebase<br>无需管理基础架构，快速构建您的应用. Firebase SDK（如Analytics、数据库、通知和崩溃报告）可让您快速迁移并专注于您的用户。<br>2、SimulatorStatusMagic，在模拟器上修改状态栏的工具，比如时间，蓝牙<br>3、FlurrySDK，雅虎统计 错误分析<br>4.Fabric: 错误统计，自动分发(整合到谷歌旗下)</p>
+            <p><a href="http://www.jianshu.com/p/32265cbb2a26" target="_blank" rel="noopener">http://www.jianshu.com/p/32265cbb2a26</a></p>
 
           
         

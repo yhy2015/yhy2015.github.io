@@ -291,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/01/iOS/并行和并发解释（队列）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/01/iOS/裁剪图片/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="y2015">
@@ -310,7 +310,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/01/iOS/并行和并发解释（队列）/" itemprop="url">并行和并发解释（队列）</a></h1>
+                <a class="post-title-link" href="/2017/08/01/iOS/裁剪图片/" itemprop="url">裁剪图片</a></h1>
         
 
         <div class="post-meta">
@@ -362,9 +362,7 @@
       
         
           
-            <p><em>并发指的是一种现象，一种经常出现，无可避免的现象。它描述的是“多个任务同时发生，需要被处理”这一现象。它的侧重点在于“发生”。</em><br><em>并行指的是一种技术，一个同时处理多个任务的技术。它描述了一种能够同时处理多个任务的能力，侧重点在于“运行”。</em><br>我们常说的concurrent队列值得是并发队列，并行队列是parallelism。<br>主队列，并发队列，串行队列，全局队列</p>
-<p>串行队列（先进入队列的任务先出队列，每次只执行一个任务）<br>并发队列（依然是“先入先出”，不过可以形成多个任务并发）<br>主队列（这是一个特殊的串行队列，而且队列中的任务一定会在主线程中执行）</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1391187-fa61d31f351b7f9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+            <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">UIImage</span> *)croppedImage:(<span class="built_in">CGRect</span>)bounds image:(<span class="built_in">UIImage</span> *)origalImg&#123;</span><br><span class="line">    <span class="built_in">CGImageRef</span> imageRef = <span class="built_in">CGImageCreateWithImageInRect</span>([origalImg <span class="built_in">CGImage</span>], bounds);</span><br><span class="line">    <span class="built_in">UIImage</span> *croppedImage = [<span class="built_in">UIImage</span> imageWithCGImage:imageRef];</span><br><span class="line">    <span class="built_in">CGImageRelease</span>(imageRef);</span><br><span class="line">    <span class="keyword">return</span> croppedImage;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
